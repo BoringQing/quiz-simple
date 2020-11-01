@@ -9,7 +9,11 @@ Git 是一个广泛使用的版本管理工具，适合团队开发。
 
 请直接在这里作答。
 
-答：
+答： git clone
+    git push
+    git pull
+    git commit 
+    git remote
 
 ## Q2
 

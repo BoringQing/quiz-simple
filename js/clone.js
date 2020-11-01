@@ -3,7 +3,13 @@
 
 // * ---------------- 解决下文中缺少 clone 函数的问题……
 // 在这里写代码……
-
+function clone(obj) {
+  let newObj = obj instanceof Array?[]:{}
+  for(var i in obj){
+      newObj[i] = typeof obj[i] == 'object'?clone(obj[i]):obj[i]
+  }
+  return newObj;
+}
 // * ---------------- 实现的效果：
 
 {

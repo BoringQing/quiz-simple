@@ -7,7 +7,18 @@ const getData = async () =>
   await fetch('https://jsonplaceholder.typicode.com/todos/').then((response) => response.json());
 
 getData().then((e) => console.log(e));
-
+{
+  type myObj = {
+    userId: Number,
+    id: Number,
+    title: string,
+    complete: Boolean
+  };
+  const getUserId = (obj: myObj): Number => obj.userId
+  const getId = (obj: myObj): Number => obj.id
+  const getTitle = (obj: myObj): string => obj.title
+  const getComplete = (obj: myObj): Boolean => obj.complete
+}
 // * ---------------- TS 的示例
 
 // * 如果你没用过 TS，可以试着快速学习一下

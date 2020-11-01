@@ -6,7 +6,28 @@
  * @returns {number} 返回和
  */
 const getSumOfTriple = (arr, start, end) => {
+  let sum = 0
   // 请实现……
+  if(start == null && end == null){
+    for(let i = 0;i < arr.length;i++){
+      if(arr[i] % 3 == 0){
+        sum += arr[i]
+      }
+    }
+  }else{
+    for(let i = 0;i < arr.length;i++){
+      if(arr[i] < start){
+        continue
+      }
+      if(arr[i] > end){
+        break
+      }
+      if(arr[i] % 3 == 0){
+        sum += arr[i]
+      }
+    }
+  }
+  return sum
 };
 
 // * ---------------- 实现的效果：
